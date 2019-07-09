@@ -1,0 +1,36 @@
+name: AntiAnything
+version: ${project.version}
+main: sandtechnology.antianything.AntiAnything
+load: STARTUP
+prefix: AntiAnything
+authors: [sandtechnology]
+description: What you want to ban is what I have!
+commands:
+  AntiAnything:
+    description: AntiAnything plugin main command.
+    aliases:
+      - aa
+      - antianything
+permissions:
+  antianything:
+    default: op
+    children:
+    - antianything.command.reload
+    - antianything.command.help
+    - antianything.build
+    - antianything.drop
+    - antianything.fly
+    - antianything.throw
+  antianything.command.*:
+    children:
+      - antianything.command.reload
+      - antianything.command.help
+  antianything.*:
+    children:
+      - antianything.build
+      - antianything.drop
+      - antianything.fly
+      - antianything.throw
+  antianything.user:
+    children:
+      - antianything.*

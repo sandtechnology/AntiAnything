@@ -1,0 +1,35 @@
+#输入你需要进行禁止操作的世界名称和禁止内容
+#
+#拥有antianything.功能名称权限的玩家将不受此项设置限制
+#功能名称需要去掉no
+#比如antianything.build
+#
+#  nobuild 禁止建造和破坏
+#  nofade 禁止方块的物理变化（树叶腐烂、冰化成水等等）
+#  nospawnerspawn 禁止刷怪笼刷新生物
+#  nodrop 禁止玩家丢弃物品
+#  nofly 禁止玩家飞行
+#  nothrow 禁止抛出雪球和末影珍珠、射箭等远程操作
+#  norain 禁止下雨
+#  nopvp 禁止PVP
+#
+#例子：
+#Worlds:
+# exmaple:
+#  - nobuild
+#  - nodrop
+#
+
+Worlds:
+  exmaple:
+    - nobuild
+
+#与上面的设置相对应
+#在玩家进行某项操作时进行提醒
+#不设置时将不会发送提醒
+
+Messages:
+  nobuild: ''
+  nodrop: ''
+  nofly: ''
+  nothrow: ''
