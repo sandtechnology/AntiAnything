@@ -9,16 +9,18 @@
 #  nospawnerspawn 禁止刷怪笼刷新生物
 #  nodrop 禁止玩家丢弃物品
 #  nofly 禁止玩家飞行
-#  nothrow 禁止抛出雪球和末影珍珠、射箭等远程操作
+#  nothrow 禁止玩家抛出雪球和末影珍珠、射箭等远程操作
 #  norain 禁止下雨
 #  nopvp 禁止PVP
 #
-#例子：
+#例子（对世界名为exmaple1和exmaple2的世界进行配置）：
 #Worlds:
-# exmaple:
+# exmaple1:
 #  - nobuild
 #  - nodrop
-#
+# exmaple2:
+#  - nobuild
+#  - nodrop
 
 Worlds:
   exmaple:
