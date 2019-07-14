@@ -15,10 +15,9 @@ import sandtechnology.antianything.listener.world.WorldLoadListener;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
-import static sandtechnology.antianything.until.ConfigUtil.getStringOrElse;
+import static sandtechnology.antianything.util.ConfigUtil.getStringOrElse;
 
 public class AntiAnything extends JavaPlugin {
 

@@ -5,7 +5,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockFadeEvent;
 
 import static sandtechnology.antianything.AntiAnything.getPlugin;
-import static sandtechnology.antianything.until.ConfigUtil.Present;
+import static sandtechnology.antianything.util.ConfigUtil.Present;
 
 public class BlockFadeListener implements Listener {
     @EventHandler

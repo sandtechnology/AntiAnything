@@ -6,7 +6,7 @@ import org.bukkit.event.weather.WeatherChangeEvent;
 import org.bukkit.event.world.WorldLoadEvent;
 
 import static sandtechnology.antianything.AntiAnything.getPlugin;
-import static sandtechnology.antianything.until.ConfigUtil.Present;
+import static sandtechnology.antianything.util.ConfigUtil.Present;
 
 public class WeatherListener implements Listener {
 

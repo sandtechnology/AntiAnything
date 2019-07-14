@@ -5,8 +5,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerDropItemEvent;
 
 import static sandtechnology.antianything.AntiAnything.getPlugin;
-import static sandtechnology.antianything.until.ConfigUtil.Present;
-import static sandtechnology.antianything.until.MessageUtil.sendIfPresent;
+import static sandtechnology.antianything.util.ConfigUtil.Present;
+import static sandtechnology.antianything.util.MessageUtil.sendIfPresent;
 
 public class PlayerDropListener implements Listener {
     @EventHandler

@@ -5,7 +5,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.SpawnerSpawnEvent;
 
 import static sandtechnology.antianything.AntiAnything.getPlugin;
-import static sandtechnology.antianything.until.ConfigUtil.Present;
+import static sandtechnology.antianything.util.ConfigUtil.Present;
 
 public class SpawnerSpawnListener implements Listener {
     @EventHandler

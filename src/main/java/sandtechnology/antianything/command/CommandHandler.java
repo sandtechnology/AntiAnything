@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static sandtechnology.antianything.AntiAnything.reload;
-import static sandtechnology.antianything.until.MessageUtil.sendMessage;
+import static sandtechnology.antianything.util.MessageUtil.sendMessage;
 
 public class CommandHandler implements TabCompleter, CommandExecutor {
     @Override

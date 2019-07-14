@@ -6,8 +6,8 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 
 import static sandtechnology.antianything.AntiAnything.getPlugin;
-import static sandtechnology.antianything.until.ConfigUtil.Present;
-import static sandtechnology.antianything.until.MessageUtil.sendIfPresent;
+import static sandtechnology.antianything.util.ConfigUtil.Present;
+import static sandtechnology.antianything.util.MessageUtil.sendIfPresent;
 
 public class BlockBuildListener implements Listener {
     @EventHandler

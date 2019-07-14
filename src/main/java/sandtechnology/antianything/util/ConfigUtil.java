@@ -1,4 +1,4 @@
-package sandtechnology.antianything.until;
+package sandtechnology.antianything.util;
 
 import sandtechnology.antianything.AntiAnything;
 
