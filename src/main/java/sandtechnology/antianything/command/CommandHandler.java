@@ -13,12 +13,22 @@ import static sandtechnology.antianything.AntiAnything.reload;
 import static sandtechnology.antianything.util.MessageUtil.sendMessage;
 
 public class CommandHandler implements TabCompleter, CommandExecutor {
+    private static CommandHandler commandHandler = new CommandHandler();
+
+    private CommandHandler() {
+    }
+
+    public static CommandHandler getCommandHandler() {
+        return commandHandler;
+    }
+
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         if (args.length == 1)
             return Arrays.asList("reload", "help");
         return null;
     }
+
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

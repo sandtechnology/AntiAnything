@@ -3,7 +3,6 @@ package sandtechnology.antianything;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-import sandtechnology.antianything.command.CommandHandler;
 import sandtechnology.antianything.listener.block.BlockBuildListener;
 import sandtechnology.antianything.listener.block.BlockFadeListener;
 import sandtechnology.antianything.listener.entity.SpawnerSpawnListener;
@@ -17,6 +16,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.stream.Collectors;
 
+import static sandtechnology.antianything.command.CommandHandler.getCommandHandler;
 import static sandtechnology.antianything.util.ConfigUtil.getStringOrElse;
 
 public class AntiAnything extends JavaPlugin {
@@ -62,7 +62,7 @@ public class AntiAnything extends JavaPlugin {
                         HashMap::new));
         HashSet<String> enableList=getConfig().getConfigurationSection("Worlds").getKeys(false).stream().flatMap(x->getConfig().getStringList(String.join(".", "Worlds", x)).stream()).collect(Collectors.toCollection(HashSet::new));
         listenerMap.keySet().retainAll(enableList);
-        listenerMap.forEach((x, y) -> getServer().getPluginManager().registerEvents(y, this));
+        listenerMap.forEach((x, listener) -> getServer().getPluginManager().registerEvents(listener, this));
     }
 
     @Override
@@ -73,8 +73,8 @@ public class AntiAnything extends JavaPlugin {
         getLogger().info("正在注册监听器...");
         load();
         getLogger().info("正在注册命令...");
-            getCommand("AntiAnything").setExecutor(new CommandHandler());
-            getCommand("AntiAnything").setTabCompleter(new CommandHandler());
+            getCommand("AntiAnything").setExecutor(getCommandHandler());
+            getCommand("AntiAnything").setTabCompleter(getCommandHandler());
             getLogger().info("命令注册成功！");
             getLogger().info("插件已启用！");
         }

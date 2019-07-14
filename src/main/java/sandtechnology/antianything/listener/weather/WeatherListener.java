@@ -21,5 +21,8 @@ public class WeatherListener implements Listener {
         if(event.getWorld().hasStorm()&&Present(getPlugin(),event.getWorld().getName(),"norain")){
             event.getWorld().setStorm(false);
         }
+        if (event.getWorld().isThundering() && Present(getPlugin(), event.getWorld().getName(), "norain")) {
+            event.getWorld().setThundering(false);
+        }
     }
 }
