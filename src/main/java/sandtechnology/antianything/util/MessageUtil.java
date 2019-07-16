@@ -12,7 +12,7 @@ public class MessageUtil {
 
 
     public static void sendMessage(CommandSender sender, ChatColor color, String message, Object... format) {
-        sender.sendMessage(ChatColor.GREEN+"[AntiEverything] " + color + String.format(message, format));
+        sender.sendMessage(ChatColor.GREEN + "[AntiAnything] " + color + String.format(message, format));
     }
 
     public static void sendIfPresent(CommandSender sender,String langKey){
