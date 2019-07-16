@@ -50,10 +50,17 @@ public class CommandHandler implements TabCompleter, CommandExecutor {
                         sendMessage(sender, ChatColor.YELLOW, "/aa help——查看帮助");
                         return true;
                     }
+                    break;
+                default:
+                    //无匹配命令
+                    sendMessage(sender, ChatColor.RED, "命令无效，输入/aa help查看帮助");
+                    return true;
             }
         }
-        //无匹配命令
-        sendMessage(sender, ChatColor.RED, "命令无效，输入/aa help查看帮助");
+        else {
+            //命令格式不对
+            sendMessage(sender, ChatColor.RED, "命令无效，输入/aa help查看帮助");
+        }
         return true;
     }
 }

@@ -12,25 +12,19 @@ commands:
       - aa
       - antianything
 permissions:
-  antianything:
+  antianything.admin:
     default: op
-    children:
-    - antianything.command.reload
-    - antianything.command.help
-    - antianything.build
-    - antianything.drop
-    - antianything.fly
-    - antianything.throw
-  antianything.command.*:
     children:
       - antianything.command.reload
       - antianything.command.help
-  antianything.*:
-    children:
       - antianything.build
       - antianything.drop
       - antianything.fly
       - antianything.throw
   antianything.user:
+    default: false
     children:
-      - antianything.*
+      - antianything.build
+      - antianything.drop
+      - antianything.fly
+      - antianything.throw
