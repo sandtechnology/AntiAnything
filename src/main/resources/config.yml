@@ -10,7 +10,7 @@
 #  nodrop 禁止玩家丢弃物品
 #  nofly 禁止玩家飞行
 #  nothrow 禁止玩家抛出雪球和末影珍珠、射箭等远程操作
-#  norain 禁止下雨
+#  norain 禁止下雨（修改reload后手动清除雨天或重启生效）
 #  nopvp 禁止PVP
 #
 #例子（对世界名为exmaple1和exmaple2的世界进行配置）：
