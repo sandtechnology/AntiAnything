@@ -60,7 +60,7 @@ public class AntiAnything extends JavaPlugin {
                         x -> getStringOrElse(String.join(".", "Messages", x), ""),
                         (x, y) -> x,
                         HashMap::new));
-        HashSet<String> enableList=getConfig().getConfigurationSection("Worlds").getKeys(false).stream().flatMap(x->getConfig().getStringList(String.join(".", "Worlds", x)).stream()).collect(Collectors.toCollection(HashSet::new));
+        HashSet<String> enableList = getConfig().getConfigurationSection("Worlds").getKeys(false).stream().flatMap(x -> getConfig().getStringList(String.join(".", "Worlds", x)).stream()).collect(Collectors.toCollection(HashSet::new));
         listenerMap.keySet().retainAll(enableList);
         listenerMap.forEach((x, listener) -> getServer().getPluginManager().registerEvents(listener, this));
     }
@@ -70,17 +70,15 @@ public class AntiAnything extends JavaPlugin {
         try {
             plugin = this;
             saveDefaultConfig();
-        getLogger().info("正在注册监听器...");
-        load();
-        getLogger().info("正在注册命令...");
+            getLogger().info("正在注册监听器...");
+            load();
+            getLogger().info("正在注册命令...");
             getCommand("AntiAnything").setExecutor(getCommandHandler());
             getCommand("AntiAnything").setTabCompleter(getCommandHandler());
-            getLogger().info("命令注册成功！");
             getLogger().info("插件已启用！");
         }
         catch (Exception ex) {
-            setEnabled(false);
-            throw new RuntimeException("插件加载失败！");
+            throw new RuntimeException("插件加载失败！", ex);
         }
     }
 

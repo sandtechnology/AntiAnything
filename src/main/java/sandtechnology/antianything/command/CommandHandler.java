@@ -28,6 +28,7 @@ public class CommandHandler implements TabCompleter, CommandExecutor {
         if (args.length == 1)
             return Arrays.asList("reload", "help");
         return null;
+
     }
 
 
