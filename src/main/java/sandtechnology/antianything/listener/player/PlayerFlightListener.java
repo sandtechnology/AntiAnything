@@ -2,6 +2,7 @@ package sandtechnology.antianything.listener.player;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerToggleFlightEvent;
 
@@ -27,6 +28,16 @@ public class PlayerFlightListener  implements Listener {
             if (!event.getPlayer().hasPermission("antianything.fly")) {
                 sendIfPresent(event.getPlayer(), "nofly");
                 event.setCancelled(true);
+            }
+        }
+    }
+
+    @EventHandler
+    public void onPlayerChangeWorld(PlayerChangedWorldEvent event) {
+        if (event.getPlayer().isFlying() && isPresent(getPlugin(), event.getPlayer().getWorld().getName(), "nofly")) {
+            if (!event.getPlayer().hasPermission("antianything.fly")) {
+                sendIfPresent(event.getPlayer(), "nofly");
+                event.getPlayer().setFlying(false);
             }
         }
     }
